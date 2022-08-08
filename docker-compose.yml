@@ -1,0 +1,57 @@
+# version: "3"
+
+# services:
+
+#   app:
+#     container_name: ptm-app
+#     image: shomatan/ptm-app:latest
+#     ports:
+#       - 9000:9000
+#     depends_on:
+#       - redis
+#       - db
+
+#   redis:
+#     container_name: ptm-redis
+#     image: redis:6.2
+#     ports:
+#       - 16379:6379
+
+#   db:
+#     container_name: ptm-db
+#     image: mysql:8.0
+#     volumes:
+#       - db-data:/var/lib/mysql
+#       - ./docker/my.cnf:/etc/mysql/conf.d/my.cnf
+#       - ./logs:/var/log/mysql
+#     environment:
+#       - MYSQL_DATABASE=ptm
+#       - MYSQL_USER=ptm
+#       - MYSQL_PASSWORD=ptm
+#       - MYSQL_ROOT_PASSWORD=rootpassword
+#       - TZ=Asia/Tokyo
+#     ports:
+#       - 33060:3306
+
+#   redis-test:
+#     container_name: ptm-redis-test
+#     image: redis:6.2
+#     ports:
+#       - 26379:6379
+
+#   db-test:
+#     container_name: ptm-db-test
+#     image: mysql:8.0
+#     volumes:
+#       - ./docker/my.test.cnf:/etc/mysql/conf.d/my.cnf
+#     environment:
+#       - MYSQL_DATABASE=ptm
+#       - MYSQL_USER=ptm
+#       - MYSQL_PASSWORD=ptm
+#       - MYSQL_ROOT_PASSWORD=rootpassword
+#       - TZ=Asia/Tokyo
+#     ports:
+#       - 33061:3306
+
+# volumes:
+#   db-data:
